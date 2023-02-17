@@ -3,6 +3,7 @@ FROM registry.access.redhat.com/ubi8/python-39:latest
 
 # Set the working directory to /app
 WORKDIR /app
+RUN chmod 777 /app
 USER 0
 # Copy the current directory contents into the container at /app
 ADD . /app
