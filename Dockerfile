@@ -3,10 +3,13 @@ FROM registry.access.redhat.com/ubi8/python-39:latest
 
 # Set the working directory to /app
 WORKDIR /app
-
+USER 0
 # Copy the current directory contents into the container at /app
 ADD . /app
 
+
+RUN chown -R 1001:0 ./
+USER 1001
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
