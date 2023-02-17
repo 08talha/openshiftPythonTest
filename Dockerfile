@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:slim
+FROM registry.access.redhat.com/ubi8/python-39:latest
 
 # Set the working directory to /app
 WORKDIR /app
