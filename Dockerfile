@@ -10,7 +10,7 @@ ADD . /app
 
 
 RUN chown -R 1001:0 ./
-USER 1001
+USER 1000
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
@@ -21,4 +21,4 @@ EXPOSE 8080
 #ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "manage.py"]
+CMD ["python", "/app/manage.py"]
