@@ -15,10 +15,10 @@ USER 1001
 RUN pip install -r requirements.txt
 
 # Make port 80 available to the world outside this container
-EXPOSE 8082
+EXPOSE 8080
 
 # Define environment variable
-ENV NAME World
+#ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "manage.py"]
