@@ -21,4 +21,4 @@ EXPOSE 8080
 #ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "/app/manage.py"]
+CMD ["python", "/app/app.py"]
