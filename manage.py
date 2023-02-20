@@ -10,7 +10,7 @@ def hello():
     """
     #Hostname: {hostname}
     #return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname())
-    return html.format(name=os.getenv("NAME", "world"))
+    return html
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8082)
