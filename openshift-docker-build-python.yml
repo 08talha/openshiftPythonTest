@@ -1,0 +1,28 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: docker-build-python
+  namespace: is-muhammed-sahin-dev
+  labels:
+    name: docker-build-python
+spec:
+  triggers:
+    - type: ImageChange
+      imageChange: {}
+    - type: ConfigChange
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/08talha/openshiftPythonTest.git'
+  strategy:
+    type: Docker
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'python:3.8'
+        namespace: openshift
+      dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'origin-python-sample-dockerfile:latest'
