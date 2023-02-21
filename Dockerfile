@@ -18,7 +18,7 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Define environment variable
-#ENV NAME World
+ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "/app/app.py"]
